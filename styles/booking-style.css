@@ -1,0 +1,157 @@
+.background-container {
+  background-image: url('../images/ReserveBack.svg'); /* Укажите путь к вашему фоновому изображению */
+  height: 700px; /* Высота будет зависеть от содержимого */
+  width: 100%; /* Занимает всю ширину родительского контейнера */
+  position: relative; /* Относительное положение */
+  background-size: cover; /* Изображение заполняет контейнер */
+  opacity: 0.75; /* Прозрачность фона */
+  padding: 40px 20px; /* Отступы для фона */
+z-index: -1;
+}
+
+.container {
+  position: relative; /* Устанавливаем относительное положение для контейнера */
+  z-index: 1; /* Устанавливаем z-index выше, чем у фона */
+}
+.table-container {
+  z-index: -1;
+  display: flex; /* Используем flexbox вместо таблицы */
+  flex-direction: row; /* Горизонтальное расположение */
+  justify-content: space-between; /* Расширяем содержимое по длине */
+  align-items: flex-start; /* Выравнивание по верхнему краю */
+  width: 100%; /* Занимает всю ширину */
+  max-width: 1200px; /* Максимальная ширина для больших экранов */
+  margin: 0 auto; /* Центрируем контейнер */
+  padding: 20px; /* Добавляем отступы */
+}
+
+.image-cell {
+  flex: 2; /* Занимает оставшееся пространство */
+  max-width: 60%; /* Максимальная ширина для изображения */
+  display: flex; /* Используем flex для центрирования */
+  justify-content: center; /* Центрируем изображение */
+  align-items: center; /* Вертикальное выравнивание */
+}
+
+.title-images img {
+  width: 100%; /* Адаптивная ширина изображения */
+  height: 550px; /* Автоматическая высота для сохранения пропорций */
+  margin-bottom: 5px;
+}
+
+.right-columns {
+  flex: 1; 
+  z-index: 1;
+  text-align: left; /* Выравнивание по левому краю */
+  margin-left: 20px; /* Уменьшаем отступ для мобильных устройств */
+  display: flex;
+  flex-direction: column; /* Вертикальное расположение */
+  justify-content: center; /* Выравнивание по верхнему краю */
+  align-items: flex-end; /* Выравнивание по левому краю */
+}
+
+.form-container {
+  width: 100%; /* Занимает всю ширину */
+  max-width: 1000px; /* Максимальная ширина для формы */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Выравнивание по левому краю */
+  justify-content: center;
+  margin-left: 45px; /* Сдвигаем форму вправо */
+}
+
+.form-field {
+  z-index: 1;
+  height: 55px;
+  background: #FFFF;
+  border-radius: 15px;
+  margin-top: 25px; /* Уменьшаем отступ между полями */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  width: 100%; /* Занимает всю ширину */
+}
+
+.form-field input {
+  width: 100%; /* Занимает всю ширину */
+  height: 40px;
+  padding: 10px;
+  border: none; /* Убираем границу */
+  border-radius: 15px; /* Закругленные углы */
+  font-size: 20px;
+  font-family: 'Bellota';
+  color: #9D8781;
+  outline: none; /* Убираем обводку */
+  box-shadow: none; /* Убираем тень */
+  text-align: left;
+  background-color: transparent; /* Прозрачный фон */
+}
+
+.form-field input:focus {
+  border: none; /* Убираем границу при фокусе */
+  outline: none; /* Убираем обводку при фокусе */
+  box-shadow: none; /* Убираем тень при фокусе */
+  background-color: rgba(255, 255, 255, 0.8); /* Пример фона при фокусе (можно изменить) */
+}
+.icon-form {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  fill: #9D8781;
+  stroke: #9D8781;
+  stroke-width: 2;
+}
+
+.form-text {
+  font-family: 'Bellota';
+  color: #9D8781;
+  font-size: 25px;
+  margin-left: 20px;
+  text-align: left;
+  justify-content: center;
+}
+.hint {
+  display: none; 
+  font-size: 12px;
+  color: #9D8781; 
+  margin-top: 5px; 
+  font-family: 'Bellota'
+}
+.gradient-text {
+  position: absolute; 
+  top: -7%;
+  left: 50%;/* Центрируем по горизонтали */
+  transform: translateX(-50%);
+  font-size: 64px; /* Размер шрифта */
+  font-family: 'Bellota'; /* Шрифт заголовка */
+  font-weight: bold;
+  display: flex; /* Используем flexbox для выравнивания */
+  justify-content: center; /* Центрируем текст по горизонтали */
+  align-items: center; /* Центрируем текст по вертикали */
+}
+
+.first-word {
+  background: linear-gradient(to right, rgba(248, 228, 190, 1) 0%, rgba(255, 243, 224, 1) 100%); /* Градиент для первого слова от F8E4BE до FFF3E0 */
+  -webkit-background-clip: text; /* Обрезка фона по тексту для WebKit-браузеров */
+  background-clip: text; /* Обрезка фона по тексту для других браузеров */
+margin-right: 10px;
+-webkit-text-fill-color: transparent; 
+  
+
+}
+
+.second-word {
+  background: linear-gradient(to right, rgba(255, 248, 232, 1) 0%, rgba(223, 195, 157, 1) 100%); /* Градиент для второго слова от FFF8E8 до DFC39D */
+  -webkit-background-clip: text; /* Обрезка фона по тексту для WebKit-браузеров */
+  background-clip: text; /* Обрезка фона по тексту для других браузеров */
+  -webkit-text-fill-color: transparent; /* Делаем цвет текста прозрачным для WebKit-браузеров */
+
+}
+@font-face {
+  font-family: 'Bellota';
+  src: url(../fonts/Bellota-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
