@@ -5,87 +5,172 @@
     font-weight: normal;
 }
 
+/* Стиль для градиентного текста (заголовка) */
 .gradient-texts {
     position: absolute; 
-    top: 3%;
-    left: 50%;/* Центрируем по горизонтали */
-    transform: translateX(-50%);
+    top: 3%; /* Расположение сверху */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translateX(-50%); /* Точный центр по горизонтали */
     font-size: 64px; /* Размер шрифта */
     font-family: 'Bellota'; /* Шрифт заголовка */
     font-weight: bold;
-    display: flex; /* Используем flexbox для выравнивания */
-    justify-content: center; /* Центрируем текст по горизонтали */
-    align-items: center; /* Центрируем текст по вертикали */
-  }
-  .card-slider {
-    width: 250px; /* Уменьшаем ширину карточки */
-    height: 300px; /* Уменьшаем высоту карточки */
-    background-color: #533529;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    margin: 0 10px;
+    text-align: center; /* Выравнивание текста по центру */
+    color: #fff; /* Цвет текста */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Добавляем тень для глубины */
 }
 
-.card img {
-    width: 25px;
-    height: 25px;
-    object-fit: cover;
-    z-index: 1;
+/* Стиль для карточки товара */
+.card-slider {
+    width: 250px; /* Уменьшаем ширину карточки */
+    height: 300px; /* Уменьшаем высоту карточки */
+    background-color: #533529; /* Цвет фона */
+    border-radius: 15px; /* Скругленные углы */
+    overflow: hidden; /* Скрываем содержимое за пределами карточки */
+    position: relative;
+    margin: 0 5px; /* Маленький отступ между карточками */
+    transition: transform 0.3s ease; /* Анимация при наведении */
 }
+
+
+.card-slider:hover::before {
+    background-color: rgba(0, 0, 0, 0.5); /* Тёмный полупрозрачный фон при наведении */
+}
+
+/* Изображение внутри карточки */
+.card img {
+    width: 100%; /* Занимает всю ширину карточки */
+    height: 70%; /* Высота изображения */
+    object-fit: cover; /* Сохраняем пропорции изображения */
+}
+
+/* Линия под текстом */
 .card-title-line {
     position: absolute;
-    bottom: 0;
-    height: 40px;
+    bottom: 0; /* Прикрепляем к нижней части карточки */
+    height: 40px; /* Высота линии */
     left: 0;
     right: 0;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5); /* Цветная подложка под текст */
-    color: white;
+    background-color: rgba(255, 252, 252, 0.193); /* Полупрозрачная подложка */
     z-index: 0;
 }
 
+/* Название товара */
 .card-title {
     position: absolute;
-    bottom: 10px; /* Располагаем текст на цветной подложке */
+    bottom: 10px; /* Располагаем над линией */
     left: 0;
     right: 0;
     text-align: center;
-    font-family: 'Arsenal';
+    font-family: 'Arsenal'; /* Используем заданный шрифт */
     color: white;
     font-size: 1.2rem;
     z-index: 1;
 }
 
+/* Иконка корзины */
 .cart-icon {
     position: absolute;
-    bottom: 50px; /* Соответственно поднимаем иконку тележки */
+    bottom: 50px; /* Располагаем выше названия */
     right: 10px;
     color: white;
-    font-size: 1.5rem; /* Используем font-size вместо size */
-    z-index: 2; /* Увеличиваем z-index, чтобы иконка была над подложкой */
-    background-image: url('../images/card-icon/cart.svg'); /* Правильно указываем путь к изображению */
+    font-size: 1.5rem; /* Размер иконки */
+    z-index: 2;
+    cursor: pointer; /* Добавляем курсор указателя */
+    background-image: url('../images/card-icon/cart.svg'); /* Путь к иконке */
     background-repeat: no-repeat;
     background-size: contain;
-    width: 24px; /* Указываем размер иконки */
-    height: 24px; /* Указываем размер иконки */
+    width: 24px;
+    height: 24px;
 }
-
 .carousel-container {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
-    height: 250px;
+    height: 750px; 
+    
+}
+.carousel-indicators {
+    display: none;
 }
 
-/* Кнопки управления слайдером */
 .carousel-control-prev,
 .carousel-control-next {
-    position: static; /* Убираем фиксированное позиционирование */
-    margin-top: 10px; /* Отступ сверху */
+    position: static; 
+    margin-top: 10px; 
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); /* Изменяем изображение стрелки */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%; /* Центрируем по вертикали */
+    transform: translateY(-50%);
+    width: 40px; /* Размер кнопки */
+    height: 40px;
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Без рамки */
+    cursor: pointer; /* Добавляем курсор указателя */
+    z-index: 10; /* Передний план */
+    outline: none; /* Убираем фокус при клике */
+}
+
+/* Стиль для иконок внутри кнопок */
+.custom-icon {
+    width: 100%; /* Занимает всю ширину кнопки */
+    height: 100%; /* Занимает всю высоту кнопки */
+    background-size: contain; /* Масштабируем иконку под размер кнопки */
+    background-repeat: no-repeat; /* Без повтора */
+    background-position: center; /* Центрируем иконку */
+    transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
+}
+.custom-carousel-btn {
+    background: none; /* Убираем фон у кнопки */
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Фиксированный размер кнопки */
+    height: 50px;
+}
+
+.custom-carousel-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Сохранение пропорций */
+}
+.custom-carousel-btn.inactive img {
+    opacity: 0.3; /* Делаем кнопку блеклой */
+    pointer-events: none; /* Отключаем клик */
+}
+.btnprod-custom {
+    background-image: radial-gradient(circle, #E0A872, #E0A872);
+    color: #fcecd0;
+    border-radius: 50px;
+    font-size: 25px;
+    height: 60px;
+    width: 340px;
+    font-family: 'Bellota';
+    border: none;
+    cursor: pointer;
+    position: relative;
+    margin-left: 50px;
+    z-index: 1;
+}
+
+.btnprod-custom::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background-color: rgba(84, 55, 43, 0.4);
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.btnprod-custom:hover {
+    background-color: rgba(84, 55, 43, 0.9);
+    transform: scale(1.05);
 }

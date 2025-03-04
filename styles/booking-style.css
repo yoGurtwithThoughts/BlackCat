@@ -30,34 +30,34 @@ z-index: -1;
   max-width: 60%; /* Максимальная ширина для изображения */
   display: flex; /* Используем flex для центрирования */
   justify-content: center; /* Центрируем изображение */
-  align-items: center; /* Вертикальное выравнивание */
+  align-items: center; 
 }
 
 .title-images img {
-  width: 100%; /* Адаптивная ширина изображения */
-  height: 550px; /* Автоматическая высота для сохранения пропорций */
+  width: 100%; 
+  height: 550px;
   margin-bottom: 5px;
 }
 
 .right-columns {
   flex: 1; 
   z-index: 1;
-  text-align: left; /* Выравнивание по левому краю */
-  margin-left: 20px; /* Уменьшаем отступ для мобильных устройств */
+  text-align: left;
+  margin-left: 20px;
   display: flex;
-  flex-direction: column; /* Вертикальное расположение */
-  justify-content: center; /* Выравнивание по верхнему краю */
-  align-items: flex-end; /* Выравнивание по левому краю */
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-end;
 }
 
 .form-container {
-  width: 100%; /* Занимает всю ширину */
-  max-width: 1000px; /* Максимальная ширина для формы */
+  width: 100%; 
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Выравнивание по левому краю */
+  align-items: flex-start; 
   justify-content: center;
-  margin-left: 45px; /* Сдвигаем форму вправо */
+  margin-left: 45px;
 }
 
 .form-field {
@@ -65,34 +65,34 @@ z-index: -1;
   height: 55px;
   background: #FFFF;
   border-radius: 15px;
-  margin-top: 25px; /* Уменьшаем отступ между полями */
+  margin-top: 25px; 
   display: flex;
   align-items: center;
   padding: 10px;
   position: relative;
-  width: 100%; /* Занимает всю ширину */
+  width: 100%; 
 }
 
 .form-field input {
-  width: 100%; /* Занимает всю ширину */
+  width: 100%;
   height: 40px;
   padding: 10px;
-  border: none; /* Убираем границу */
-  border-radius: 15px; /* Закругленные углы */
+  border: none; 
+  border-radius: 15px; 
   font-size: 20px;
   font-family: 'Bellota';
   color: #9D8781;
-  outline: none; /* Убираем обводку */
-  box-shadow: none; /* Убираем тень */
+  outline: none; 
+  box-shadow: none; 
   text-align: left;
-  background-color: transparent; /* Прозрачный фон */
+  background-color: transparent; 
 }
 
 .form-field input:focus {
-  border: none; /* Убираем границу при фокусе */
-  outline: none; /* Убираем обводку при фокусе */
-  box-shadow: none; /* Убираем тень при фокусе */
-  background-color: rgba(255, 255, 255, 0.8); /* Пример фона при фокусе (можно изменить) */
+  border: none; 
+  outline: none; 
+  box-shadow: none; 
+  background-color: rgba(255, 255, 255, 0.8); 
 }
 .icon-form {
   width: 20px;
@@ -122,31 +122,33 @@ z-index: -1;
 .gradient-text {
   position: absolute; 
   top: -7%;
-  left: 50%;/* Центрируем по горизонтали */
+  left: 50%;
   transform: translateX(-50%);
-  font-size: 64px; /* Размер шрифта */
-  font-family: 'Bellota'; /* Шрифт заголовка */
+  font-size: 64px; 
+  font-family: 'Bellota'; 
   font-weight: bold;
-  display: flex; /* Используем flexbox для выравнивания */
-  justify-content: center; /* Центрируем текст по горизонтали */
-  align-items: center; /* Центрируем текст по вертикали */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .first-word {
-  background: linear-gradient(to right, rgba(248, 228, 190, 1) 0%, rgba(255, 243, 224, 1) 100%); /* Градиент для первого слова от F8E4BE до FFF3E0 */
-  -webkit-background-clip: text; /* Обрезка фона по тексту для WebKit-браузеров */
-  background-clip: text; /* Обрезка фона по тексту для других браузеров */
-margin-right: 10px;
--webkit-text-fill-color: transparent; 
+  background: linear-gradient(to right, rgba(248, 228, 190, 1) 0%, rgba(255, 243, 224, 1) 100%); 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  margin-right: 10px;
+  -webkit-text-fill-color: transparent; 
+  z-index: 1;
   
 
 }
 
 .second-word {
-  background: linear-gradient(to right, rgba(255, 248, 232, 1) 0%, rgba(223, 195, 157, 1) 100%); /* Градиент для второго слова от FFF8E8 до DFC39D */
-  -webkit-background-clip: text; /* Обрезка фона по тексту для WebKit-браузеров */
-  background-clip: text; /* Обрезка фона по тексту для других браузеров */
-  -webkit-text-fill-color: transparent; /* Делаем цвет текста прозрачным для WebKit-браузеров */
+  background: linear-gradient(to right, rgba(255, 248, 232, 1) 0%, rgba(223, 195, 157, 1) 100%);
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  z-index: 1;
 
 }
 @font-face {

@@ -141,86 +141,158 @@
             <span class="second-word">столик</span>
         </h1>
     </div>
-    <div class="container-fluid custom-container">
-        <!-- Секция "Наше меню" -->
-        <div class="text-center mb-0">
-            <h1 class="gradient-texts">
-                <span class="first-word">Наше</span>
-                <span class="second-word">меню</span>
-            </h1>
-        </div>
-    
-    
-    <!-- Добавляем пустой разделитель для большего отступа -->
-    <div class="spacer"></div>
-    
-    <div class="justify-content-center align-items-center" style="height: 50px;">
-        <div class="justify-content-between align-items-center">
-            <button class="btn btn-sm btn-custom me-4">Кофе</button>
-            <button class="btn btn-sm btn-custom ms-4">Десерты</button>
+    <div class="container text-center">
+        <!-- Заголовок "Наше меню" -->
+        <div class="row">
+            <div class="col">
+                <h1 class="gradient-texts">
+                    <span class="first-word">Наше</span>
+                    <span class="second-word">меню</span>
+                </h1>
+            </div>
         </div>
     </div>
-    </div>  
-    <div class="carousel-container">
-        <!-- Слайдер -->
-        <div id="coffeeCarousel" class="carousel slide" data-interval="false">
-            <!-- Индикаторы слайдов -->
-            <ol class="carousel-indicators">
-                <li data-target="#coffeeCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#coffeeCarousel" data-slide-to="1"></li>
-                <li data-target="#coffeeCarousel" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Обёртка для слайдов -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-center">
-                        <div class="card-slider">
-                            <img src="images/card-images/Raf.png" alt="Раф">
-                            <div class="card-title-line"></div>
-                            <i class="fas fa-shopping-cart cart-icon"></i>
-                            <div class="card-title">Раф</div>
-                        </div>
-                        <div class="card-slider">
-                            <img src="images/card-images/Latte.png" alt="Латте">
-                            <div class="card-title-line"></div>
-                            <i class="fas fa-shopping-cart cart-icon"></i>
-                            <div class="card-title">Латте</div>
-                        </div>
-                        <div class="card-slider">
-                            <img src="images/card-images/Capuchino.png" alt="Капучино">
-                            <div class="card-title-line"></div>
-                            <i class="fas fa-shopping-cart cart-icon">
-                            </i>
-                            <div class="card-title">Капучино</div>
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <!-- Добавьте здесь следующий набор карточек -->
-                </div>
-                <div class="carousel-item">
-                    <!-- Добавьте здесь следующий набор карточек -->
+    <div class="col">
+        <div class="container text-center mt-3">
+            <div class="row mt-3">
+                <div class="col mt-5">
+                    <div class="spacer my-5"></div>
+                    <button class="btnprod btn-sm btn-custom me-2">Кофе</button>
+                    <button class="btnprod btn-sm btn-custom ms-2">Десерты</button>
                 </div>
             </div>
-
-            <!-- Кнопки управления слайдером -->
-            <a class="carousel-control-prev" href="#coffeeCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#coffeeCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="script/inputhint.js"></script>
+        <div class="container d-flex align-items-center justify-content-center vh-100">
+            <div class="row h-75 overflow-hidden"> <!-- Установка высоты 75% viewport и скрытие переполнения -->
+                <div class="col">
+                    <div id="coffeeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <!-- Первый слайд -->
+                            <div class="carousel-item active">
+                                <div class="row justify-content-center h-250">
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                        <div class="card-slider">
+                                            <img src="images/card-images/Raf.png" alt="Раф"
+                                                class="img-fluid rounded-top">
+                                            <div class="card-title-line">
+                                                <div class="card-body text-center">
+                                                    <i class="fas fa-shopping-cart cart-icon"></i>
+                                                    <h5 class="card-title">Раф</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                        <div class="card-slider">
+                                            <img src="images/card-images/Latte.png" alt="Латте"
+                                                class="img-fluid rounded-top">
+                                            <div class="card-body text-center">
+                                                <div class="card-title-line">
+                                                    <i class="fas fa-shopping-cart cart-icon"></i>
+                                                    <h5 class="card-title">Латте</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                        <div class="card-slider">
+                                            <img src="images/card-images/Capuchino.png" alt="Капучино"
+                                                class="img-fluid rounded-top">
+                                            <div class="card-body text-center">
+                                                <div class="card-title-line">
+                                                    <i class="fas fa-shopping-cart cart-icon"></i>
+                                                    <h5 class="card-title">Капучино</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Второй слайд -->
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                        <div class="card-slider">
+                                            <img src="images/card-images/Espresso.png" alt="Эспрессо"
+                                                class="img-fluid rounded-top">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-shopping-cart cart-icon"></i>
+                                                <h5 class="card-title">Эспрессо</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                        <div class="card-slider">
+                                            <img src="images/card-images/Macchiato.png" alt="Макиато"
+                                                class="img-fluid rounded-top">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-shopping-cart cart-icon"></i>
+                                                <h5 class="card-title">Макиато</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12">
+                                        <div class="card-slider">
+                                            <img src="images/card-images/Mocha.png" alt="Мокка"
+                                                class="img-fluid rounded-top">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-shopping-cart cart-icon"></i>
+                                                <h5 class="card-title">Мокка</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Кнопки пролистывания -->
+                        <div class="container d-flex align-items-center justify-content-center vh-100">
+                            <div class="row">
+                                <div class="col">
+                                    <div id="coffeeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                                        <div class="carousel-inner">
+                                            <!-- Слайды -->
+                                            <div class="carousel-item active">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-4 col-sm-6 col-12">
+                                                        <div class="card-slider">
+                                                            <img src="images/card-images/Raf.png" alt="Раф" class="img-fluid rounded-top">
+                                                            <div class="card-body text-center">
+                                                                <i class="fas fa-shopping-cart cart-icon"></i>
+                                                                <h5 class="card-title">Раф</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Другие карточки -->
+                                                </div>
+                                            </div>
+                                            <!-- Другие слайды -->
+                                        </div>
+                                    </div>
+                        
+                                    <!-- Кастомные кнопки ниже карточек -->
+                                    <div class="custom-carousel-controls d-flex justify-content-between mt-3">
+                                        <button class="custom-carousel-btn custom-prev" data-direction="prev">
+                                            <img src="../images/card-icon/inactivebutton.svg" alt="Prev" class="custom-icon inactive">
+                                        </button>
+                                        <button class="custom-carousel-btn custom-next" data-direction="next">
+                                            <img src="../images/card-icon/backicon.svg" alt="Next" class="custom-icon active">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="script/inputhint.js"></script>
+        <script src="script/active-inactive-button.js"></script>
 </body>
+
 </html>
